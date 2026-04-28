@@ -1,0 +1,939 @@
+Name: UI
+Type: UICategoryFolder
+Children:
+- Name: DefaultStyleSheet
+  Id: g=8da2b5865c73184b748c69f73d34bedf
+  Type: StyleSheet
+  Children:
+  - Name: ButtonStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: ButtonStyle
+    - Name: Accent
+      Type: ButtonStyle
+      Children:
+      - Name: Color
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#0fafff"
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#075982"
+      - Name: TextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+    - Name: BorderedRectangular
+      Type: ButtonStyle
+      Children:
+      - Name: Color
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#0fafff"
+      - Name: TextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#e4e4e4"
+      - Name: BorderWidth
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 5.0
+    - Name: BorderedCircular
+      Type: ButtonStyle
+      Children:
+      - Name: Color
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#0fafff"
+      - Name: TextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#e4e4e4"
+      - Name: BorderWidth
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 5.0
+      - Name: Radius
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: -1.0
+    - Name: Emergency
+      Type: ButtonStyle
+      Children:
+      - Name: Color
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#eb001b"
+      - Name: TextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#f8e71c"
+      - Name: BorderWidth
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 5.0
+      - Name: Radius
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: -1.0
+    - Name: Transparent
+      Type: ButtonStyle
+      Children:
+      - Name: Color
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: BorderWidth
+        Type: BaseDataVariableType
+        DataType: Size
+  - Name: InputBoxStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: InputBoxStyle
+  - Name: SwitchStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: SwitchStyle
+  - Name: GaugeStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: GaugeStyle
+  - Name: NavigationPanelStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: NavigationPanelStyle
+  - Name: ChartStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: ChartStyle
+  - Name: DataListStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: DataListStyle
+  - Name: ToolTipStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: ToolTipStyle
+  - Name: ScrollBarStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: ScrollBarStyle
+  - Name: AccordionStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: AccordionStyle
+  - Name: PieChartStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: PieChartStyle
+  - Name: HistogramChartStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: HistogramChartStyle
+  - Name: LabelStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: LabelStyle
+  - Name: RadioButtonStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: RadioButtonStyle
+  - Name: CheckBoxStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: CheckBoxStyle
+  - Name: RectangleStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: RectangleStyle
+      Children:
+      - Name: BorderThickness
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 1.0
+  - Name: ScreenStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: ScreenStyle
+- Name: NativePresentationEngine
+  Type: NativePresentationEngine
+  ReferenceType: HasOrderedComponent
+  Children:
+  - Name: VirtualKeyboard
+    Type: BaseDataVariableType
+    DataType: VirtualKeyboardEngineTypeEnum
+  - Name: StartWindow
+    Type: NodePointer
+    DataType: NodeId
+    Value: "/Objects/HMIProject_LoginLogout_UserVisibility/UI/MainWindow"
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Window"
+  - Name: StyleSheet
+    Type: NodePointer
+    DataType: NodeId
+    Value: "/Objects/HMIProject_LoginLogout_UserVisibility/UI/DefaultStyleSheet"
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/StyleSheet"
+  - Name: StartingUser
+    Type: NodePointer
+    DataType: NodeId
+    Value: "/Objects/Users/Anonymous"
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/UserType"
+  - Name: Sessions
+    Type: BaseObjectType
+- Name: MainWindow
+  Id: g=01a7e8933afd7c95fe894b0859308138
+  Supertype: Window
+  Children:
+  - Name: Width
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 800.0
+  - Name: Height
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 600.0
+  - Name: Caption
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/HMIProject_LoginLogout_UserVisibility@BrowseName"
+  - Name: User
+    Type: Label
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":"User"}
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+  - Name: UserCombobox
+    Type: ComboBox
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+    - Name: Model
+      Type: NodePointer
+      DataType: NodeId
+      Value: "/Objects/HMIProject_LoginLogout_UserVisibility/Security/Users"
+      Children:
+      - Name: ItemKind
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/ObjectTypes/BaseObjectType/UserType"
+      - Name: Kind
+        Type: PropertyType
+        DataType: NodeId
+    - Name: SelectedValue
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+    - Name: SelectedItem
+      Type: NodePointer
+      DataType: NodeId
+      Children:
+      - Name: Kind
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/ObjectTypes/BaseObjectType/UserType"
+    - Name: UISelectedItem
+      Type: BaseDataVariableType
+      DataType: NodeId
+      AccessLevel: Read
+    - Name: UISelectedValue
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      AccessLevel: Read
+    - Class: Reference
+      Target: ns=3;i=480
+      Direction: Forward
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 200.0
+    - Name: Item
+      Type: Alias
+      DataType: NodeId
+      Children:
+      - Name: Kind
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/ObjectTypes/BaseObjectType/UserType"
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 30.0
+  - Name: Password
+    Type: Label
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":"Password"}
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 60.0
+  - Name: PasswordTextbox
+    Type: TextBox
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 200.0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 80.0
+  - Name: UserLoggedIn
+    Type: Label
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":"User Logged In"}
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 110.0
+  - Name: UserCurrent
+    Type: Label
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "{Session}/User@BrowseName"
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 130.0
+  - Name: Login
+    Type: Button
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":"Login"}
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 150.0
+    - Name: MouseClickEventHandler1
+      Type: EventHandler
+      Children:
+      - Name: ListenEventType
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+      - Name: MethodsToCall
+        Type: BaseObjectType
+        Children:
+        - Name: MethodContainer1
+          Type: BaseObjectType
+          Children:
+          - Name: ns=2;ObjectPointer
+            Type: NodePointer
+            DataType: NodeId
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType"
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{Session}@NodeId"
+              Children:
+              - Name: Mode
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+          - Name: ns=2;Method
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Login"
+          - Name: InputArguments
+            Type: BaseObjectType
+            Children:
+            - Name: Username
+              Type: BaseDataVariableType
+              DataType: String
+              Description: {"NamespaceIndex":1,"TextId":"LoginUsernameDescription"}
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../UserCombobox/UISelectedValue"
+            - Name: Password
+              Type: BaseDataVariableType
+              DataType: Password
+              Description: {"NamespaceIndex":1,"TextId":"LoginPasswordDescription"}
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../PasswordTextbox/Text"
+          - Name: OutputArguments
+            Type: BaseObjectType
+            Children:
+            - Name: Result
+              Type: BaseDataVariableType
+              DataType: Boolean
+              Description: {"NamespaceIndex":1,"TextId":"ChangeUserResultDescription"}
+            - Name: ResultCode
+              Type: BaseDataVariableType
+              DataType: ChangeUserResultCode
+              Description: {"NamespaceIndex":1,"TextId":"ChangeUserResultCodeDescription"}
+      - Name: EventArguments
+        Type: MouseClickEvent
+        Children:
+        - Name: EventId
+          Type: PropertyType
+          DataType: ByteString
+        - Name: EventType
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceNode
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceName
+          Type: PropertyType
+          DataType: String
+        - Name: Time
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: ReceiveTime
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: Message
+          Type: PropertyType
+          DataType: LocalizedText
+        - Name: Severity
+          Type: PropertyType
+          DataType: UInt16
+  - Name: Logout
+    Type: Button
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":"Logout"}
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 180.0
+    - Name: MouseClickEventHandler1
+      Type: EventHandler
+      Children:
+      - Name: ListenEventType
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+      - Name: MethodsToCall
+        Type: BaseObjectType
+        Children:
+        - Name: MethodContainer1
+          Type: BaseObjectType
+          Children:
+          - Name: ns=2;ObjectPointer
+            Type: NodePointer
+            DataType: NodeId
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType"
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{Session}@NodeId"
+              Children:
+              - Name: Mode
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+          - Name: ns=2;Method
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Logout"
+      - Name: EventArguments
+        Type: MouseClickEvent
+        Children:
+        - Name: EventId
+          Type: PropertyType
+          DataType: ByteString
+        - Name: EventType
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceNode
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceName
+          Type: PropertyType
+          DataType: String
+        - Name: Time
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: ReceiveTime
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: Message
+          Type: PropertyType
+          DataType: LocalizedText
+        - Name: Severity
+          Type: PropertyType
+          DataType: UInt16
+  - Name: Label1
+    Type: Label
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":"User: Builder Password: builder\nUser: Distributor Password: distributor\nUser: Vendor Password: vendor"}
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 250.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 30.0
+  - Name: BuilderEllipse
+    Type: Ellipse
+    Children:
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 5.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 5.0
+    - Name: BorderThickness
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 1.0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 230.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 35.0
+    - Name: FillColor
+      Type: BaseDataVariableType
+      DataType: Color
+      ModellingRule: Optional
+      Value: "#008000"
+    - Name: Visible
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
+      Children:
+      - Name: KeyValueConverter1
+        Type: ValueMapConverter
+        Children:
+        - Name: Source
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "{Session}/User@BrowseName"
+        - Name: ns=2;Pairs
+          Type: BaseObjectType
+          ModellingRule: None
+          Children:
+          - Name: Pair
+            Type: ValueMapPair
+            ModellingRule: None
+            Children:
+            - Name: Key
+              Type: BaseDataVariableType
+              DataType: String
+              ModellingRule: None
+              Value: "Anonymous"
+            - Name: Value
+              Type: BaseDataVariableType
+              DataType: Boolean
+              ModellingRule: None
+          - Name: Pair1
+            Type: ValueMapPair
+            ModellingRule: None
+            Children:
+            - Name: Key
+              Type: BaseDataVariableType
+              DataType: String
+              ModellingRule: None
+              Value: "Builder"
+            - Name: Value
+              Type: BaseDataVariableType
+              DataType: Boolean
+              ModellingRule: None
+              Value: true
+          - Name: Pair2
+            Type: ValueMapPair
+            ModellingRule: None
+            Children:
+            - Name: Key
+              Type: BaseDataVariableType
+              DataType: String
+              ModellingRule: None
+              Value: "Distributor"
+            - Name: Value
+              Type: BaseDataVariableType
+              DataType: Boolean
+              ModellingRule: None
+          - Name: Pair3
+            Type: ValueMapPair
+            ModellingRule: None
+            Children:
+            - Name: Key
+              Type: BaseDataVariableType
+              DataType: String
+              ModellingRule: None
+              Value: "Vendor"
+            - Name: Value
+              Type: BaseDataVariableType
+              DataType: Boolean
+              ModellingRule: None
+  - Name: DistributorEllipse
+    Type: Ellipse
+    Children:
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 5.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 5.0
+    - Name: BorderThickness
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 1.0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 230.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: FillColor
+      Type: BaseDataVariableType
+      DataType: Color
+      ModellingRule: Optional
+      Value: "#008000"
+    - Name: Visible
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
+      Children:
+      - Name: KeyValueConverter1
+        Type: ValueMapConverter
+        Children:
+        - Name: Source
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "{Session}/User@BrowseName"
+        - Name: ns=2;Pairs
+          Type: BaseObjectType
+          ModellingRule: None
+          Children:
+          - Name: Pair
+            Type: ValueMapPair
+            ModellingRule: None
+            Children:
+            - Name: Key
+              Type: BaseDataVariableType
+              DataType: String
+              ModellingRule: None
+              Value: "Anonymous"
+            - Name: Value
+              Type: BaseDataVariableType
+              DataType: Boolean
+              ModellingRule: None
+          - Name: Pair1
+            Type: ValueMapPair
+            ModellingRule: None
+            Children:
+            - Name: Key
+              Type: BaseDataVariableType
+              DataType: String
+              ModellingRule: None
+              Value: "Builder"
+            - Name: Value
+              Type: BaseDataVariableType
+              DataType: Boolean
+              ModellingRule: None
+          - Name: Pair2
+            Type: ValueMapPair
+            ModellingRule: None
+            Children:
+            - Name: Key
+              Type: BaseDataVariableType
+              DataType: String
+              ModellingRule: None
+              Value: "Distributor"
+            - Name: Value
+              Type: BaseDataVariableType
+              DataType: Boolean
+              ModellingRule: None
+              Value: true
+          - Name: Pair3
+            Type: ValueMapPair
+            ModellingRule: None
+            Children:
+            - Name: Key
+              Type: BaseDataVariableType
+              DataType: String
+              ModellingRule: None
+              Value: "Vendor"
+            - Name: Value
+              Type: BaseDataVariableType
+              DataType: Boolean
+              ModellingRule: None
+  - Name: VendorEllipse
+    Type: Ellipse
+    Children:
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 5.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 5.0
+    - Name: BorderThickness
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 1.0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 230.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 65.0
+    - Name: FillColor
+      Type: BaseDataVariableType
+      DataType: Color
+      ModellingRule: Optional
+      Value: "#008000"
+    - Name: Visible
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
+      Children:
+      - Name: KeyValueConverter1
+        Type: ValueMapConverter
+        Children:
+        - Name: Source
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "{Session}/User@BrowseName"
+        - Name: ns=2;Pairs
+          Type: BaseObjectType
+          ModellingRule: None
+          Children:
+          - Name: Pair
+            Type: ValueMapPair
+            ModellingRule: None
+            Children:
+            - Name: Key
+              Type: BaseDataVariableType
+              DataType: String
+              ModellingRule: None
+              Value: "Anonymous"
+            - Name: Value
+              Type: BaseDataVariableType
+              DataType: Boolean
+              ModellingRule: None
+          - Name: Pair1
+            Type: ValueMapPair
+            ModellingRule: None
+            Children:
+            - Name: Key
+              Type: BaseDataVariableType
+              DataType: String
+              ModellingRule: None
+              Value: "Builder"
+            - Name: Value
+              Type: BaseDataVariableType
+              DataType: Boolean
+              ModellingRule: None
+          - Name: Pair2
+            Type: ValueMapPair
+            ModellingRule: None
+            Children:
+            - Name: Key
+              Type: BaseDataVariableType
+              DataType: String
+              ModellingRule: None
+              Value: "Distributor"
+            - Name: Value
+              Type: BaseDataVariableType
+              DataType: Boolean
+              ModellingRule: None
+          - Name: Pair3
+            Type: ValueMapPair
+            ModellingRule: None
+            Children:
+            - Name: Key
+              Type: BaseDataVariableType
+              DataType: String
+              ModellingRule: None
+              Value: "Vendor"
+            - Name: Value
+              Type: BaseDataVariableType
+              DataType: Boolean
+              ModellingRule: None
+              Value: true
+- File: Screens/Screens.yaml
+- File: Keyboards/Keyboards.yaml
